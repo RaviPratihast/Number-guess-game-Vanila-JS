@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  width: 60rem;
+  margin-top: 10rem;
+  margin-inline: auto;
+  padding: 1rem;
+  border: 2px solid black;
+}
+
+.secret-number {
+  height: 5rem;
+  width: 5rem;
+  background-color: aqua;
+
+  /* text-align: center; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.answer-and-scorebox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  margin-top: 1rem;
+}
+
+.answer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  background-color: rgb(225, 184, 178);
+  /* height: 3rem; */
+  /* width: 3rem; */
+}
+.score-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.2rem;
+
+  /* margin-top: 1rem; */
+}
+
+.score {
+  height: 2.5rem;
+  width: 2.5rem;
+  background-color: aquamarine;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
