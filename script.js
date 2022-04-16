@@ -50,25 +50,32 @@ document.querySelector('.check').addEventListener('click', function () {
 let secretNumber = Math.trunc(Math.random() * 20) + 1;
 let score = 20;
 let highScore = 0;
+
+const displayMessage = function (message) {
+  document.querySelector('.message').textContent = message;
+};
 // document.querySelector('.number').textContent = secretNumber;
 
 document.querySelector('.check').addEventListener('click', function () {
   let guessedNumber = Number(document.querySelector('.guess').value);
 
   if (!guessedNumber) {
-    document.querySelector('.message').textContent = 'Enter a Input';
+    // document.querySelector('.message').textContent = 'Enter a Input';
+    displayMessage('Enter a Input');
 
     // if the number is correct
   } else if (guessedNumber === secretNumber) {
     if (score > 1) {
       document.querySelector('.number').textContent = secretNumber;
-      document.querySelector('.message').textContent =
-        '😀 Yayy!!!.....Correct Answer';
+      // document.querySelector('.message').textContent =
+      //   '😀 Yayy!!!.....Correct Answer';
+      displayMessage('😀 Yayy!!!.....Correct Answer');
       score = score + 1;
 
       document.querySelector('.score').textContent = score;
       // document.querySelector('.high-score').textContent = highScore;
       document.querySelector('body').style.backgroundColor = '#22c55e';
+      // document.querySelector('.number').style.width = '8rem';
 
       if (score > highScore) {
         highScore = score;
@@ -76,6 +83,7 @@ document.querySelector('.check').addEventListener('click', function () {
       }
     } else {
       document.querySelector('.message').textContent = '😭 You Loose!!';
+      // displayMessage()
       document.querySelector('body').style.backgroundColor = '#ef4444';
     }
   }
@@ -83,20 +91,29 @@ document.querySelector('.check').addEventListener('click', function () {
   // condition for checking the value is less then or greater then secret number.
   else if (guessedNumber !== secretNumber) {
     if (score > 1) {
-      document.querySelector('.message').textContent =
+      // document.querySelector('.message').textContent =
+      //   guessedNumber > secretNumber
+      //     ? // displayMessage()
+      //       '📈 😄 Guess is to High'
+      //     : '📉 😄 Guess is to low';
+
+      displayMessage(
         guessedNumber > secretNumber
-          ? '📈 😄 Guess is to High'
-          : '📉 😄 Guess is to low';
+          ? // displayMessage()
+            '📈 😄 Guess is to High'
+          : '📉 😄 Guess is to low'
+      );
       score = score - 1;
       document.querySelector('.score').textContent = score;
     } else {
-      document.querySelector('.message').textContent = '😭 You Loose!!';
+      // document.querySelector('.message').textContent = '😭 You Loose!!';
+
+      displayMessage('😭 You Loose!!');
       document.querySelector('body').style.backgroundColor = '#ef4444';
 
       document.querySelector('.score').textContent = 0;
     }
   }
-  debugger;
 
   // longer method is below one and the simple and shotest method using turnery method is above one.
 
@@ -137,10 +154,9 @@ document.querySelector('.check').addEventListener('click', function () {
   document.querySelector('.again').addEventListener('click', function () {
     score = 20;
     secretNumber = Math.trunc(Math.random() * 20) + 1;
-    // document.querySelector('.high-score').textContent = score;
-    // let score = 20;
-    document.querySelector('.message').textContent = '🤔 start guessing...';
 
+    // document.querySelector('.message').textContent = '🤔 start guessing...';
+    displayMessage('🤔 start guessing...');
     document.querySelector('.score').textContent = score;
     document.querySelector('.high-score').textContent = highScore;
     document.querySelector('.number').textContent = '?';

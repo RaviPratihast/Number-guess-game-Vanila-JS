@@ -22,12 +22,25 @@ header > h1 {
   font-size: 4rem;
 }
 
-header > div {
+.btn-between {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
 }
+/* .left-secret-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+} */
+
+/* .left-line,
+.right-line {
+  height: 0.5rem;
+  width: 57rem;
+  background-color: white;
+} */
 
 .number {
   display: flex;
@@ -35,7 +48,7 @@ header > div {
   align-items: center;
   flex-wrap: wrap;
 
-  margin-top: 3rem;
+  margin-top: 2rem;
   height: 6rem;
   width: 6rem;
   font-size: 2.8rem;
