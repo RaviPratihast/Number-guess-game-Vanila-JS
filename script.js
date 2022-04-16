@@ -115,40 +115,6 @@ document.querySelector('.check').addEventListener('click', function () {
     }
   }
 
-  // longer method is below one and the simple and shotest method using turnery method is above one.
-
-  // if the guessed number is greater then secret number
-
-  /*
-  else if (guessedNumber > secretNumber) {
-    if (score > 1) {
-      document.querySelector('.message').textContent = '📈 😄 Guess is to High';
-      score = score - 1;
-      document.querySelector('.score').textContent = score;
-    } else {
-      document.querySelector('.message').textContent = '😭 You Loose!!';
-      document.querySelector('body').style.backgroundColor = '#ef4444';
-
-      document.querySelector('.score').textContent = 0;
-    }
-  }
-  // if the guessed number is smaller then secret number
-  else if (guessedNumber < secretNumber) {
-    if (score > 1) {
-      document.querySelector('.message').textContent = '📉 😄 Guess is to low';
-      score = score - 1;
-      document.querySelector('.score').textContent = score;
-    } else {
-      document.querySelector('.message').textContent = '😭 You Loose!!';
-      document.querySelector('body').style.backgroundColor = '#ef4444';
-
-      document.querySelector('.score').textContent = 0;
-    }
-  }
-});
-
-*/
-
   // reset the game for to play again!!!
 
   document.querySelector('.again').addEventListener('click', function () {
