@@ -11,20 +11,29 @@ body {
 .between {
   display: flex;
   justify-content: flex-end;
+  flex-wrap: wrap;
   /* margin-top: rem; */
 }
 header > h1 {
   display: flex;
   justify-content: center;
-
+  flex-wrap: wrap;
   margin-top: 1rem;
   font-size: 4rem;
+}
+
+header > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .number {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 
   margin-top: 3rem;
   height: 6rem;
@@ -50,6 +59,7 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 
   margin-top: 5rem;
 }
@@ -59,6 +69,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   gap: 1rem;
 
   /* margin-top: 7rem; */
@@ -70,6 +81,7 @@ main {
   flex-direction: column;
   justify-content: center;
   text-align: justify;
+  flex-wrap: wrap;
   gap: 1.5rem;
 
   font-size: 2.2rem;
