@@ -13,8 +13,6 @@ document.querySelector('.check').addEventListener('click', function () {
 
   if (!guessedNumber) {
     displayMessage('Enter a Input');
-
-    // if the number is correct
   } else if (guessedNumber === secretNumber) {
     if (score > 1) {
       document.querySelector('.number').textContent = secretNumber;
@@ -34,10 +32,7 @@ document.querySelector('.check').addEventListener('click', function () {
       displayMessage('😭 You Loose!!');
       document.querySelector('body').style.backgroundColor = '#ef4444';
     }
-  }
-
-  // condition for checking the value is less then or greater then secret number.
-  else if (guessedNumber !== secretNumber) {
+  } else if (guessedNumber !== secretNumber) {
     if (score > 1) {
       displayMessage(
         guessedNumber > secretNumber
@@ -54,8 +49,6 @@ document.querySelector('.check').addEventListener('click', function () {
     }
   }
 
-  // reset the game for to play again!!!
-
   document.querySelector('.again').addEventListener('click', function () {
     score = 20;
     secretNumber = Math.trunc(Math.random() * 20) + 1;
@@ -64,8 +57,6 @@ document.querySelector('.check').addEventListener('click', function () {
     document.querySelector('.score').textContent = score;
     document.querySelector('.high-score').textContent = highScore;
     document.querySelector('.number').textContent = '?';
-
-    // empty string is for input field. Input values are always a string.
     document.querySelector('.guess').value = '';
     document.querySelector('body').style.backgroundColor = '#222';
   });
